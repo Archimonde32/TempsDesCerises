@@ -1,0 +1,543 @@
+/* Style de la barre de navigation */
+body{
+    background-color: #300B0B;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #060505;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 90px;
+}
+.nav-links li:last-child {
+    margin-right: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff5722; /* Changez cette couleur selon votre préférence */
+}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 5px auto;
+        transition: 0.4s;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/*secton home*/
+#home {
+    
+    padding: 40px 0;
+}
+
+.home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.left-content p {
+    font-size: 18px;
+    color: #fff;
+}
+
+.left-content img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.right-content {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.right-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+/* Styles pour la section "Plats Populaires" */
+.popular-dishes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.dish {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.dish img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/*section menus */
+
+/* Styles pour la section "Menus" */
+#menus {
+    background-color: #060505;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#menus h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.menu-divider {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.menu h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.menu p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* section boisson */
+/* Styles pour la section "Boissons" */
+#boissons {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#boissons h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.drink-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.drink-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.drink {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* section plats */
+/* Styles pour la section "Plats" */
+#plats {
+    background-color: #060505;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#plats h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.plat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.plat-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.plat-column-right {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.separator {
+    width: 1px;
+    background-color: white; /* Couleur du trait séparateur */
+    height: 100%;
+    margin: 0 20px;
+}
+
+.plat {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.plat h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/*section dessert */
+
+#desserts {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#desserts h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.dessert-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dessert-column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.separator {
+    width: 2px;
+    background-color: #fff; /* Couleur du trait séparateur */
+    height: 270px;
+    margin: 0 20px;
+}
+
+.dessert {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.dessert h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* section contact&reservation*/
+#contact {
+    background-color: #060505;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.reserve-button {
+    background-color: #ff6347; /* Couleur du bouton Réservez */
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contact-right {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.opening-hours {
+    margin-top: 20px;
+}
+
+.opening-hours h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.opening-hours p {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 20px;
+}
+
+.contact-item img {
+    width: 35px; /* Taille de l'icône */
+    height: 35px;
+    margin-right: 10px;
+}
+
+.contact-item p {
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+}
+
+
+/* le responsive */
+
+@media screen and (max-width: 767px) {
+    /* Styles pour la section Home en mode mobile */
+    #home .home-content {
+        flex-direction: column;
+    }
+    
+    .left-content, .right-content {
+        flex-basis: 100%; /* Occupe toute la largeur */
+    }
+    
+    .popular-dishes {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu {
+        margin-bottom: 20px;
+    }
+    
+    .menu-divider {
+        display: none; /* Cacher la ligne de séparation sur les petits écrans */
+    }
+}
+
+/* Styles pour la section "Boissons" */
+@media screen and (max-width: 767px) {
+    .drink-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .drink-column {
+        flex-basis: 50%; /* 2 colonnes par ligne */
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .plat-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .plat-column {
+        flex-basis: 50%; /* 2 colonnes par ligne */
+        margin-bottom: 20px;
+    }
+}
+
+/* Styles pour la section "Desserts" */
+@media screen and (max-width: 767px) {
+    .dessert-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .dessert-column {
+        flex-basis: 50%; /* 2 colonnes par ligne */
+        margin-bottom: 20px;
+    }
+    
+    .separator {
+        display: none; /* Cacher la ligne de séparation sur les petits écrans */
+    }
+}
