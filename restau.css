@@ -46,55 +46,10 @@ nav {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:active {
     color: #ff5722; /* Changez cette couleur selon votre préférence */
 }
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-bottom: 10px;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        padding: 15px;
-    }
-
-    .bar {
-        background-color: #fff;
-        height: 3px;
-        width: 25px;
-        margin: 5px auto;
-        transition: 0.4s;
-    }
-
-    .menu-toggle.active .bar:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .menu-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-toggle.active .bar:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
 
 /*secton home*/
 #home {
@@ -165,15 +120,17 @@ nav {
     margin-right: 10px;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     text-align: center;
+    
 }
 
 .dish img {
-    max-width: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 225/163;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 /*section menus */
@@ -467,6 +424,52 @@ nav {
 
 
 /* le responsive */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #060505;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .bar {
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 5px auto;
+        transition: 0.4s;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
 
 @media screen and (max-width: 767px) {
     /* Styles pour la section Home en mode mobile */
@@ -482,7 +485,9 @@ nav {
         display: flex;
         flex-direction: column;
     }
-    
+    .row{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -538,6 +543,36 @@ nav {
     }
     
     .separator {
-        display: none; /* Cacher la ligne de séparation sur les petits écrans */
+        display: none; 
+    }
+}
+
+/* Styles pour la section "Contact & Réservation" */
+@media screen and (max-width: 767px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left {
+        margin-bottom: 20px;
+    }
+
+    .contact-right {
+        text-align: center;
+    }
+
+    .opening-hours {
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        margin-bottom: 10px;
     }
 }
